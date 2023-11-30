@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles_buy_new.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Lessons</title>
+</head>
+<body>
+    <div class="lesson-container">
+        <div class="coaches-container">
+            <h2>Choose Your Coach</h2>
+
+            <div class="coach-selection">
+                <div class="coach" id="coach1" onclick="selectCoach(1)">
+                    <img src="cemkaan.jpg" alt="Cem Kaan">
+                    <p>GM Cem Kaan Gokerkan</p>
+                    
+                </div>
+                <div class="coach" id="coach2" onclick="selectCoach(2)">
+                    <img src="vahap.jpg" alt="Vahap">
+                    <p>GM Vahap Sanal</p>
+                    
+                </div>
+            </div>
+
+            <div class="hours-selection">
+               
+                <label for="hours">Select Hours: <br> (max 10 hours at 1 time)</label>
+                <input type="number" name="hours" id="hours" min="1" max="10" value="1" oninput="calculateTotal() ">
+                
+            </div>
+
+            <div class="total-amount">
+                <h2>Total Amount:</h2>
+                <p id="total"> $10</p>
+            </div>
+        </div>
+
+        <div class="user-info">
+            <form
+                action="https://formspree.io/f/xknlarde"
+                method="POST"
+                >
+            <h2 class="spec">Player Information</h2>
+            <label class="spec" for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label class="spec" for="fide-id">FIDE ID:</label>
+            <input type="text" id="fide-id" name="fide-id" title="FIDE ID must be 7 or 8 numbers" required>
+
+            <label class="spec" for="fide-rating">FIDE Rating:</label>
+            <input type="text" id="fide-rating" name="fide-rating" title="FIDE Rating must be a 4-digit number" required>
+
+            <label class="spec" for="gmail">Email:</label>
+            <input type="email" id="gmail" name="gmail" title="Please enter a valid Gmail address" required>
+
+            <label id="hourss" class="spec" for="hours2"></label>
+            <input type="text" id="hours2" name="hours_purchased" title="hours" value="1" required>
+
+            <label class="spec" for="coachname"></label>
+                <input type="text" id="coachname" name="coachname" title="coach" readonly required>
+            
+
+            <button onclick="submitPurchase()">Submit</button>
+
+        
+            </form>
+        </div>
+    </div>
+
+    <script src="buy_int.js"></script>
+</body>
+</html>
