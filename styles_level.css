@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    font-family: 'Cabin', sans-serif;
+    font-size: 300px;
+}
+
+.rectangle {
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    background-size: cover;
+    background-position: center;
+    transition: background-size 0.5s ease;
+}
+
+.top-left {
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 1) 100%), url('rec1.jpg');
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 1) 100%), url('rec2.jpg');
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 1) 100%), url('rec3.jpg');
+}
+
+.bottom-right {
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 1) 100%), url('rec4.jpg');
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 31px;
+    transition: font-size 0.5s ease;
+}
+

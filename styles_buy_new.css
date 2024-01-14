@@ -1,0 +1,165 @@
+body {
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Cabin', sans-serif;
+    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.9) 100%), url('chessss.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #eee;
+}
+
+.lesson-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90vh;
+    padding: 20px;
+}
+
+.coaches-container {
+    width: 50%;
+    height: 90%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    color: #ffffff; 
+    text-align: center;
+    
+}
+
+.coach-selection {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.coach {
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coach img {
+    width: 262px;
+    height: 262px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.coach:not(.selected) img {
+    filter: brightness(50%);
+}
+
+.hours-selection {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block; 
+    text-align: center; 
+    
+}
+
+.spec{
+    padding-right: 32%;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    background: transparent;
+    border: 3px solid #fff;
+    color: #fff;
+    border-radius: 8px; 
+}
+
+#total {
+    font-size: 35px;
+}
+
+.total-amount {
+    text-align: center;
+    margin-bottom: 20px;
+    display: none; 
+}
+
+.user-info {
+    width: 45%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+.user-info input {
+    width: 65%;
+    height: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #454545;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    width: 68%; 
+
+}
+
+
+.coach.selected ~ .total-amount {
+    display: block;
+}
+
+
+.coach.selected ~ .user-info {
+    display: flex;
+}
+
+
+
+
+#hours2{
+    display: none;
+}
+
+
+#coachname{
+    display: none;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .lesson-container {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .coaches-container,
+    .user-info {
+        width: 100%; 
+    }
+
+    .coach img {
+        width: 100%; 
+        height: auto;
+    }
+}

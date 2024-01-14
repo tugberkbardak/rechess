@@ -1,0 +1,406 @@
+body {
+    margin: 0;
+    font-family: 'Cabin', sans-serif; 
+    
+    }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0); 
+    color: white;
+    text-align: center;
+    z-index: 1000;
+    transition: background-color 0.5s ease; 
+  }
+  
+  .navbar.scrolled {
+    background-color: black; 
+
+  }
+  
+  .logo {
+    font-size: 34px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    
+  }
+  
+  .social-icons {
+    position: absolute;
+    top: 50%;
+    
+    transform: translateY(-60%);
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin-left: 15px;
+    position: relative;
+  }
+  
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; 
+    background-color: white; 
+    padding: 5px; 
+  }
+
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+
+  .logo {
+    font-size: 44px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    
+  }
+ 
+  
+
+  
+  .header {
+    position: relative;
+    height: 100vh;
+  }
+  
+
+  
+  
+  .header-content {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+  
+  .title {
+    font-size: 66px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+
+  .description {
+    font-size: 24px;
+    max-width: 600px;
+    margin: 0 auto;
+   
+  }
+  
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%), url('chessss.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%);
+    
+
+    
+  }
+
+
+
+/* BUTTON */
+
+
+
+.cta-button {
+  display: inline-block;
+  margin-top: 10px; 
+  padding: 10px 20px;
+  background-color: transparent; 
+  color: white;
+  text-decoration: none;
+  border: 2px solid white; 
+  border-radius: 10px;
+  font-size: 20px; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.header-content {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  transition: transform 0.5s ease;
+  background-size: cover; 
+}
+
+.cta-button:hover ~ .header-content {
+  transform: translate(-50%, -50%) scale(1.1); 
+  background-size: 110% auto; 
+}
+
+
+
+
+
+
+
+  
+/* ABOUT US */
+
+
+
+.about-us {
+  background-color: #61677A; 
+  padding: 80px 0;
+}
+
+
+
+.about-content {
+   padding-left: 10px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+
+  
+  .image-content img{
+    margin-right: 40px; 
+    margin-left: 10px;
+    max-width: 750px; 
+    width: 100%; 
+    height: auto;
+    border-radius: 10px; 
+    
+  }
+  
+  .text-content {
+  flex: 1;
+  text-align: left;
+  color: white;
+}
+
+.text-content h2 {
+  font-size: 60px; 
+}
+
+.text-content p {
+  font-size: 22px; 
+}
+  
+  
+
+
+/* Coaches Section */
+
+.coaches-section {
+  background-color: #f2f2f2;
+  padding: 40px 0;
+  text-align: center;
+  background: linear-gradient(to top, #ffffff, #61677A);
+  margin: 0; 
+
+}
+
+.coaches-section h2 {
+  font-size: 52px;
+  color: #000;
+}
+
+.coach {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+}
+
+.coach img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  transition: transform 0.5s, filter 0.5s; 
+}
+
+.coach:hover img {
+  transform: rotateY(180deg); 
+  filter: brightness(0%); 
+}
+
+.coach .back {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(180deg); 
+  transition: transform 0.5s, opacity 0.5s; 
+  opacity: 0; 
+  color: white;
+}
+
+.coach:hover .back {
+  transform: translate(-50%, -50%) rotateY(0deg); 
+  opacity: 1; 
+}
+
+.coach .back p {
+  font-size: 20px;
+  white-space: nowrap; 
+
+}
+
+
+
+
+
+
+
+  
+
+  
+
+  @media only screen and (max-width: 600px) {
+    img {
+      max-width: 100%;
+      
+  }
+    .navbar {
+      padding: 10px; 
+    }
+  
+    .logo {
+      font-size: 28px; 
+      margin-right: 10px; 
+    }
+  
+    
+  
+    .social-icons img {
+      margin-top: 15px;
+      width: 20px;
+      height: 20px;
+      padding: 3px; 
+    }
+  
+    .header-content {
+      top:25%;
+      margin-top: 120px;
+      
+    }
+  
+    .title {
+      font-size: 56px; 
+    }
+  
+    .description {
+      font-size: 26px; 
+    }
+  
+    .about-us {
+      padding: 30px 30px; 
+      
+    }
+  
+    .image-content img {
+      max-width: 100%; 
+      display: block;
+      margin: 0 auto; 
+      
+    }
+  
+    .text-content {
+      text-align: center; 
+      margin-right: 10px;
+    }
+  
+    .text-content h2 {
+      font-size: 50px; 
+    }
+  
+    .text-content p {
+      font-size: 26px; 
+    }
+  
+    .about-content {
+      flex-direction: column; 
+    }
+  }
+
+/* FOOTER */
+
+  footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+  }
+
+  .copyright {
+    font-size: 14px;
+  }
+
+
+
+  /* BUTTON */
+
+
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #61677A;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.8);
+  opacity: 0; 
+  transition: opacity 0.3s ease-in-out;
+}
+
+#scrollToTop span {
+  line-height: 1;
+}
+
+#scrollToTop.show {
+  opacity: 1;
+}
+
+
+
+/* PUZZLE */
+
+.puzzle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    
+}
+h3{
+  text-align: center;
+  font-size: 36px;
+}
